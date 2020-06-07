@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kwangwoon</title>
+    <meta charset="utf-8"> <!-- UTF-8이라는 방식으로 저장됨 -->
+    <meta name="viewport" content="width=device-width, height=divice-height, initial-scale=1.0, user-scalable=no,
+ maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
+ <!--모바일페이지크기조절메타태그-->
+    <style>
+      html {
+        -webkit-text-size-adjust: none;
+      }
+      .info {
+        text-align : center;
+        padding-top : 100px;
+      }
+      .maps {
+      text-align : center;
+      }
+      p {
+        text-align : center;
+      }
+
+      </style>
+      </head>
+      <body>
+        <div calss="info">
+        <p><image src="KwangwoonUniv.png" width="25%" height="25%"></p>
+        </div>
+        <div class="maps">
+        <div id="map" style="width:400px;height:400px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	342387e972fd72ad544d153b48e9ead3"></script>
+        <script>
+		      var container = document.getElementById('map');
+		        var options = {
+			           center: new kakao.maps.LatLng(33.450701, 126.570667),
+			              level: 3
+		                };
+
+		                  var map = new kakao.maps.Map(container, options);
+	        </script>
+      </div>
+      </body>
+  </html>
