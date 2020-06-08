@@ -75,16 +75,12 @@
         function search() {
           var search_value = document.getElementById('input').value;
           switch(search_value) {
-            case "광운대역" :
+            case "광운대역" || "광운대" || "ㄱㅇㄷㅇ" || "ㄱㅇㄷ" :
             alert("광운대역 노선 정보 이동합니다");
             location.href="https://chaerim26.github.io/KWTP/KwangwoonUniv.html";
             break;
 
-            case "광운대" :
-            alert("광운대역 노선 정보로 이동합니다");
-            location.href="https://chaerim26.github.io/KWTP/KwangwoonUniv.html";
-            break;
-
+  
             default :
             alert("해당 역으로 한번에 가는 노선이 없습니다.");
           }
