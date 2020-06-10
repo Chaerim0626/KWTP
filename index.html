@@ -3,16 +3,24 @@
   <head>
     <title>KWTP</title>
     <meta charset="utf-8"> <!-- UTF-8이라는 방식으로 저장됨 -->
-    <meta name="viewport" content="width=device-width, height=divice-height, initial-scale=1.0, user-scalable=no,
- maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
- <!--모바일페이지크기조절메타태그-->
+    <meta name="viewport" content="width=device-width, height=divice-height,
+    initial-scale=1.0, user-scalable=no,
+    maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
+ <!--모바일 반응형 웹-->
  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
     <style>
       input::-ms-input-placeholder {color:#a0a0a0;}
       input::-webkit-input-placeholder {color :#a0a0a0;}
       input::-moz-placeholder {color:#a0a0a0;}
+
+      @media(min-width : 800px) {
+        .div1, .div2 {
+                  display : block;
+        }
+      }
       html {
         -webkit-text-size-adjust: none;
+        font-family: 'Nanum Gothic', sans-serif;
       }
 
       p {
@@ -42,7 +50,6 @@
         border-radius: 10px;
       }
       input {
-        font-family: 'Nanum Gothic', sans-serif;
         width: 70%;
         border : 0px;
         font-size : 14px;
@@ -53,7 +60,6 @@
         border-radius: 10px;
       }
       button {
-        font-family: 'Nanum Gothic', sans-serif;
         height : 100%;
         width: 20%;
         border: 0px;
@@ -69,8 +75,11 @@
     </style>
   </head>
   <body>
+    <nav>
+
+    </nav>
     <div calss="div1">
-    <p><image src="logo.png" width="80%" height="80%"></p></div>
+    <p><image src="logo.png" width="70%" height="70%"></p></div>
     <script>
         function search() {
           var search_value = document.getElementById('input').value;
@@ -122,11 +131,11 @@
           }
           }
     </script>
-  <form>
-    <div class="div2">
-    <input type="text" id="input" placeholder="검색어입력 : 예)광운대역, 1호선">
-    <button type="button" onclick="search()">검색</button>
-    </div>
-  </form>
+    <form>
+      <div class="div2">
+        <input type="text" id="input" placeholder="검색어입력 : 예)광운대역, 광운대">
+        <button type="button" onclick="search()">검색</button>
+      </div>
+    </form>
   </body>
 </html>
