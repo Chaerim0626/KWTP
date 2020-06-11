@@ -7,22 +7,66 @@
     initial-scale=1.0, user-scalable=no,
     maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
  <!--모바일 반응형 웹-->
- <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
     <style>
       input::-ms-input-placeholder {color:#a0a0a0;}
       input::-webkit-input-placeholder {color :#a0a0a0;}
       input::-moz-placeholder {color:#a0a0a0;}
 
-      @media(min-width : 800px) {
-        .div1, .div2 {
+      @media screen and (min-width : 600px) {
+        .div1 {
+                  background-color : white;
                   display : block;
+                  width : 400px;
+                  height : 220px;
         }
       }
       html {
         -webkit-text-size-adjust: none;
         font-family: 'Nanum Gothic', sans-serif;
+        background-color : white;
       }
+      #menu {
+        background-color : #32BEBE;
+        width : 100%;
+        height : 40px;
+      }
+      #menu ul {
+        list-style : none;
+        margin-left: 3px;
+        margin : auto;
+        text-align: center;
+      }
+      #menu ul li {
+        float : left;
+        text-align : center;
+        vertical-align: center;
+        line-height : 40px; /* 글씨가 가운데 높이에 오도록 */
+        border-left : 1px solid #ffffff;
 
+      }
+      #menu ul li:first-child {
+        border-left : none;
+      }
+      #menu ul li:sixth-child {
+        border-left : none;
+      }
+      #menu ul li:first-child {
+        border-left : none;
+      }
+      #menu .menu_link {
+        width : 60px;
+        display : block;
+        padding : 0 20px;
+        font-size : 12px;
+        color : white;
+        text-decoration: none;
+      }
+      #menu .menu_link:hover {
+        color : #32BEBE;
+        background-color : #EEEEEE;
+        width : 60px;
+      }
       p {
         text-align : center;
         padding-top : 10;
@@ -34,7 +78,7 @@
         margin-right: auto;
         margin-top: auto;
         margin-bottom: auto;
-        padding-top : 10;
+        padding-top : 10px;
 
       }
       .div2 {
@@ -52,7 +96,7 @@
       input {
         width: 70%;
         border : 0px;
-        font-size : 14px;
+        font-size : 12px;
         padding : 15px 10px 10px 10px;
         outline: none;
         float: left;
@@ -62,7 +106,7 @@
       button {
         height : 100%;
         width: 20%;
-        border: 0px;
+        border: 2px;
         font-size : 14px;
         background-color : #32BEBE;
         color: #ffffff;
@@ -75,8 +119,16 @@
     </style>
   </head>
   <body>
-    <nav>
-
+    <nav id = "menu">
+      <ul>
+        <li> <a class="menu_link" href="#">사용가이드</a> </li>
+        <li> <a class="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100043">261</a> </li>
+        <li> <a class="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100130">1017</a> </li>
+        <li> <a class="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100152">1137</a> </li>
+        <li> <a class ="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100155">1140</a> </li>
+        <li> <a class="menu_link" href="#">광운대 중앙도서관 정류장</a> </li>
+        <li> <a class="menu_link" href="#">광운대 동해문화예술관 정류장</a> </li>
+      <ul>
     </nav>
     <div calss="div1">
     <p><image src="logo.png" width="70%" height="70%"></p></div>
@@ -110,21 +162,25 @@
             break;
 
             case "석계" :
-            alert("광운대역 노선 정보 이동합니다");
+            alert("석계역 노선 정보 이동합니다");
             location.href="https://chaerim26.github.io/KWTP/Seokgye.html";
             break;
 
             case "ㅅㄱㅇ" :
-            alert("광운대역 노선 정보 이동합니다");
+            alert("석계역 노선 정보 이동합니다");
             location.href="https://chaerim26.github.io/KWTP/Seokgye.html";
             break;
 
             case "ㅅㄱ" :
-            alert("광운대역 노선 정보 이동합니다");
+            alert("석계역 노선 정보 이동합니다");
             location.href="https://chaerim26.github.io/KWTP/Seokgye.html";
             break;
 
 
+
+            case "" :
+            alert("지하철 역을 입력해주세요!");
+            break;
 
             default :
             alert("해당 역으로 한번에 가는 버스 노선이 없습니다!");
