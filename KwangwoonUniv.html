@@ -8,7 +8,32 @@
  <!--모바일페이지크기조절메타태그-->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
     <style>
+      html {
+        -webkit-text-size-adjust: none;
+        font-family: 'Nanum Gothic', sans-serif;
+        background-color : white;
+      }
+      nav {
+        font-size : 13px;
+        background-color : #eeeeee;
+        width : 100%;
+        height : 30px;
+        border : none;
+      }
+      nav input {
+        padding : 0 5px;
+        border : none;
+        outline : 0;
+        line-height: 30px;
+        color : #828282;
+        text-shadow : 0.5px 0.5px 0.5px #dcdcdc;
 
+      }
+      footer {
+        width : 100%;
+        height: 30px;
+        background-color: #eeeeee:
+      }
       .info {
         text-align : center;
         padding-top : 10px;
@@ -35,18 +60,17 @@
         margin-bottom: auto;
         text-align : center;
         color : #AAAAAA;
-        font-family: 'Nanum Gothic', sans-serif;
         font-size : 14px;
         width : 160px;
         padding-bottom : 6px;
       }
-      details > summary {
+      details summary {
         text-align : center;
         border : none;
         list-style : none;
         border-color :
       }
-      details > summary::-webkit-details-marker {
+      details summary::-webkit-details-marker {
         display: none;
         text-align : center;
         } /*마크없애기*/
@@ -54,6 +78,9 @@
       </style>
       </head>
       <body>
+        <nav>
+          <input type="button" value="뒤로가기" onclick="history.back(-1)";>
+        </nav>
         <div class="info">
         <p><image src="KwangwoonUniv.png" width=70% height=70%></p>
           소요시간은 최소시간이므로 교통상황에 따라 더 걸릴 수 있습니다.
@@ -82,5 +109,8 @@
           </script>
           </div>
           </div>
+      <footer>
+        &nbsp;안녕하세요
+      </footer>
   </body>
 </html>
