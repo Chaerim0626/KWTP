@@ -26,47 +26,97 @@
         font-family: 'Nanum Gothic', sans-serif;
         background-color : white;
       }
-      #menu {
+      nav {
         background-color : #32BEBE;
         width : 100%;
         height : 40px;
       }
-      #menu ul {
+      #main_menu, #sub_menu {
+        margin: auto;
+        padding : 0 15px;
+        list-style : none;
+      }
+
+      #main_menu li {
+        float : left;
+
+      }
+
+      #main_menu li a {
+        font-size: 14px;
+        color : white;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        line-height: 40px;
+        border-left: 1px solid #dcdcdc;
+        padding : 0 15px;
+        text-shadow: 0.5px 0.5px 0.5px #EEEEEE;
+      }
+      #main_menu li:first-child a {
+        border-left : none;
+      }
+      #sub_menu {
+        border-left : none;
+        position : absolute;
+        background-color: #14A0A0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      #sub_menu li a {
+        padding : 0 15px;
+        text-align: center;
+        display : block;
+        color : #EEEEEE;
+        font-size: 12px;
+        text-decoration: none;
+        text-shadow: none;
+      }
+      #main_menu li:hover #sub_menu {
+        opacity: 1;
+        visibility: visible;
+
+      }
+      footer {
+        text-decoration: none;
+        font-size : 12px;
+      }
+
+    /*  #main_menu {
         list-style : none;
         margin-left: 3px;
         margin : auto;
         text-align: center;
-      }
-      #menu ul li {
-        float : left;
-        text-align : center;
         vertical-align: center;
-        line-height : 40px; /* 글씨가 가운데 높이에 오도록 */
+        line-height : 40px;  글씨가 가운데 높이에 오도록
         border-left : 1px solid #ffffff;
 
-      }
-      #menu ul li:first-child {
-        border-left : none;
-      }
-      #menu ul li:sixth-child {
-        border-left : none;
-      }
-      #menu ul li:first-child {
-        border-left : none;
-      }
-      #menu .menu_link {
-        width : 60px;
+        width : 80px;
         display : block;
         padding : 0 20px;
         font-size : 12px;
         color : white;
         text-decoration: none;
+        float : left;
       }
-      #menu .menu_link:hover {
+
+      #sub_menu {
+        width : 80px;
+        display : block;
+        padding : 0px;
+        font-size : 12px;
+        color : white;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+      #main_menu:hover {
+        visibility: visible;
         color : #32BEBE;
         background-color : #EEEEEE;
         width : 60px;
-      }
+      } */
+
       p {
         text-align : center;
         padding-top : 10;
@@ -119,15 +169,24 @@
     </style>
   </head>
   <body>
-    <nav id = "menu">
-      <ul>
-        <li> <a class="menu_link" href="#">사용가이드</a> </li>
-        <li> <a class="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100043">261</a> </li>
-        <li> <a class="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100130">1017</a> </li>
-        <li> <a class="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100152">1137</a> </li>
-        <li> <a class ="menu_link" href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100155">1140</a> </li>
-        <li> <a class="menu_link" href="#">광운대 중앙도서관 정류장</a> </li>
-        <li> <a class="menu_link" href="#">광운대 동해문화예술관 정류장</a> </li>
+    <nav>
+      <ul id ="main_menu">
+        <li> <a href="#">사용가이드</a> </li>
+        <li> <a href="#">버스 정보</a>
+        <ul id="sub_menu">
+          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100043"
+            aria-label="">261</a> </li>
+          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100130">1017</a> </li>
+          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100152">1137</a> </li>
+          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100155">1140</a> </li>
+        </ul>
+      </li>
+        <li> <a href="#">정류장 정보</a>
+        <ul id="sub_menu">
+          <li> <a href="#">중앙도서관 정류장</a> </li>
+          <li> <a href="#">동해문화예술관 정류장</a> </li>
+        </ul>
+      </li>
       <ul>
     </nav>
     <div calss="div1">
@@ -157,7 +216,7 @@
             break;
 
             case "석계역" :
-            alert("광운대역 노선 정보 이동합니다");
+            alert("석계역 노선 정보 이동합니다");
             location.href="https://chaerim26.github.io/KWTP/Seokgye.html";
             break;
 
@@ -193,5 +252,12 @@
         <button type="button" onclick="search()">검색</button>
       </div>
     </form>
+    <footer>
+      <p>
+      email : dasapcr@gmail.com &nbsp;
+      github : <a href="https://github.com/chaerim26/KWTP">https://github.com/chaerim26/KWTP</a><br>
+      Copyright 2020. CHAERIM All Rights Reserved.
+      </p>
+    </footer>
   </body>
 </html>
