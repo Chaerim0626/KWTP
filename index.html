@@ -13,13 +13,13 @@
       input::-webkit-input-placeholder {color :#a0a0a0;}
       input::-moz-placeholder {color:#a0a0a0;}
 
-      @media screen and (min-width : 600px) {
+     /*  @media screen and (min-width : 600px) {
         .div1 {
                   background-color : white;
                   display : block;
                   width : 400px;
                   height : 220px;
-        }
+        } */
       }
       html {
         -webkit-text-size-adjust: none;
@@ -51,6 +51,7 @@
         text-shadow: 0.5px 0.5px 0.5px #EEEEEE;
       }
       footer {
+        clear : both; /*float 속성 해제*/
         width: 100%;
         height: 50px;
         color : #EEEEEE;
@@ -58,7 +59,7 @@
         text-decoration: none;
         text-align: justify;
         font-size : 10px;
-        padding : 2px 10px;
+        padding : 2px 15px;
       }
       p {
         text-align : center;
@@ -78,7 +79,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: auto;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         height: 50px;
         width: 80%; /*400px*/
         border: 1px solid #32BEBE;
@@ -108,14 +109,59 @@
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
       }
+      .info {
+        margin-bottom: 10px;
+        float : left;
+      }
+      #main_info, #sub_info {
+        display : block;
+        list-style : none;
+      }
+      #main_info details {
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: auto;
+          margin-bottom: auto;
+          padding-bottom : 3px;
+      }
+      #main_info details summary {
+        height : 30px;
+        text-align: center;
+        line-height: 30px;
+        outline : none;
+      }
+     #main_info  details summary::-webkit-details-marker {
+        display: none;
+        }
+      #main_info details summary li {
+        float : left;
+        font-family: 'Nanum Gothic', sans-serif;
+        color : #32BEBEBE;
+        font-size : 14px;
+        text-decoration: none;
+        border : none;
+        outline : none;
+      }
+
+      #sub_info li a {
+        height : 20px;
+        font-family: 'Nanum Gothic', sans-serif;
+        color : #323232;
+        font-size : 12px;
+        text-decoration: underline;
+        border : none;
+        outline : none;
+      }
+
     </style>
   </head>
   <body>
     <nav>
       <ul id ="main_menu">
-        <li> <a href="#">사용가이드 보기</a> </li>
+        <li> <a href="#">KWTP 사용가이드</a> </li>
       <ul>
     </nav>
+    <section>
     <div calss="div1">
     <p><image src="logo.png" width="70%" height="70%"></p></div>
     <script>
@@ -397,11 +443,57 @@
         <button type="button" onclick="search()">검색</button>
       </div>
     </form>
-    <footer>
+    <div class="info">
+    <ul id ="main_info">
+      <details>
+      <summary>
+      <li>버스 정보 보기∇</a> </summary>
+      <ul id="sub_info">
+        <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100043"
+          aria-label="">261</a> </li>
+        <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100130">1017</a> </li>
+        <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100152">1137</a> </li>
+        <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100155">1140</a> </li>
+      </ul>
+     </li>
+     </details>
+     <details>
+     <summary>
+      <li>정류장 정보 보기∇ </summary>
+      <ul id="sub_info">
+        <li> <a href="#">중앙도서관 정류장</a> </li>
+        <li> <a href="#">동해문화예술관 정류장</a> </li>
+      </ul>
+      </li>
+    </details>
+    <details>
+      <summary>
+        <li>지하철 정보 보기∇</a> </summary>
+          <ul id="sub_info">
+            <li> <a href="#">1호선</a> </li>
+            <li> <a href="#">2호선</a> </li>
+            <li> <a href="#">3호선</a> </li>
+            <li> <a href="#">4호선</a> </li>
+            <li> <a href="#">5호선</a> </li>
+            <li> <a href="#">6호선</a> </li>
+            <li> <a href="#">7호선</a> </li>
+            <li> <a href="#">9호선</a> </li>
+            <li> <a href="#">공항철도</a> </li>
+            <li> <a href="#">우이신설선</a> </li>
+            <li> <a href="#">경의중앙선</a> </li>
+            <li> <a href="#">경춘선</a> </li>
+            <li> <a href="#">분당선</a> </li>
+          </ul>
+        </li>
+      </details>
+    <ul>
+  </diV>
+  </section>
+  <footer>
       email : dasapcr@gmail.com<br>
       github : <a href="https://github.com/chaerim26/KWTP">
       https://github.com/chaerim26/KWTP</a><br>
       Copyright 2020. CHAERIM All Rights Reserved.
-    </footer>
-  </body>
+  </footer>
+ </body>
 </html>
