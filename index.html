@@ -27,12 +27,12 @@
         background-color : white;
       }
       nav {
-        background-color : #32BEBE;
+        background-color : #46D2D2;
         width : 100%;
         height : 40px;
         text-align: center;
       }
-      #main_menu, #sub_menu {
+      #main_menu{
         margin: auto;
         padding : 0 15px;
         list-style : none;
@@ -42,44 +42,23 @@
         display : inline-block;
       }
       #main_menu li a {
-        font-size: 12px;
+        font-size: 13px;
         color : white;
-        display: inline-block;
         text-align: center;
         text-decoration: none;
         line-height: 40px;
-        border-left: 1px solid #dcdcdc;
         padding : 0 15px;
         text-shadow: 0.5px 0.5px 0.5px #EEEEEE;
       }
-      #main_menu li:first-child a {
-        border-left : none;
-      }
-      #sub_menu {
-        border-left : none;
-        position : absolute;
-        background-color: #14A0A0;
-        opacity: 0;
-        visibility: hidden;
-      }
-      #sub_menu li a {
-        padding : 0 15px;
-        text-align: center;
-        display : block;
-        color : #EEEEEE;
-        border : none;
-        font-size: 10px;
-        text-decoration: none;
-        text-shadow: none;
-      }
-      #main_menu li:hover #sub_menu {
-        opacity: 1;
-        visibility: visible;
-
-      }
       footer {
+        width: 100%;
+        height: 50px;
+        color : #EEEEEE;
+        background-color: #46C6C6;
         text-decoration: none;
+        text-align: justify;
         font-size : 10px;
+        padding : 2px 10px;
       }
       p {
         text-align : center;
@@ -93,7 +72,6 @@
         margin-top: auto;
         margin-bottom: auto;
         padding-top : 10px;
-
       }
       .div2 {
         display: block;
@@ -135,22 +113,7 @@
   <body>
     <nav>
       <ul id ="main_menu">
-        <li> <a href="#">사용가이드</a> </li>
-        <li> <a href="#">버스 정보</a>
-        <ul id="sub_menu">
-          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100043"
-            aria-label="">261</a> </li>
-          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100130">1017</a> </li>
-          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100152">1137</a> </li>
-          <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100155">1140</a> </li>
-        </ul>
-      </li>
-        <li> <a href="#">정류장 정보</a>
-        <ul id="sub_menu">
-          <li> <a href="#">중앙도서관 정류장</a> </li>
-          <li> <a href="#">동해문화예술관 정류장</a> </li>
-        </ul>
-      </li>
+        <li> <a href="#">사용가이드 보기</a> </li>
       <ul>
     </nav>
     <div calss="div1">
@@ -435,11 +398,10 @@
       </div>
     </form>
     <footer>
-      <p>
       email : dasapcr@gmail.com<br>
-      github : <a href="https://github.com/chaerim26/KWTP">https://github.com/chaerim26/KWTP</a><br>
+      github : <a href="https://github.com/chaerim26/KWTP">
+      https://github.com/chaerim26/KWTP</a><br>
       Copyright 2020. CHAERIM All Rights Reserved.
-      </p>
     </footer>
   </body>
 </html>
