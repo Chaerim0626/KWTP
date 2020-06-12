@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kwangwoon</title>
+    <title>Seokgye</title>
     <meta charset="utf-8"> <!-- UTF-8이라는 방식으로 저장됨 -->
     <meta name="viewport" content="width=device-width, height=divice-height, initial-scale=1.0, user-scalable=no,
- maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
- <!--모바일페이지크기조절메타태그-->
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
+    maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
+    <!--모바일페이지크기조절메타태그-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
+    rel="stylesheet">
     <style>
-
+      html {
+        -webkit-text-size-adjust: none;
+        font-family: 'Nanum Gothic', sans-serif;
+        background-color : white;
+      }
+      nav {
+        font-size : 13px;
+        background-color : #eeeeee;
+        width : 100%;
+        height : 30px;
+        border : none;
+      }
+      nav input {
+        padding : 0 5px;
+        border : none;
+        outline : 0;
+        line-height: 30px;
+        color : #828282;
+        text-shadow : 0.5px 0.5px 0.5px black;
+      }
       .info {
         text-align : center;
         padding-top : 10px;
@@ -35,7 +55,6 @@
         margin-bottom: auto;
         text-align : center;
         color : #AAAAAA;
-        font-family: 'Nanum Gothic', sans-serif;
         font-size : 14px;
         width : 160px;
         padding-bottom : 6px;
@@ -44,16 +63,19 @@
         text-align : center;
         border : none;
         list-style : none;
-        border-color :
+        outline : 0;
       }
       details summary::-webkit-details-marker {
         display: none;
         text-align : center;
-        } /*마크없애기*/
+        } 
 
       </style>
       </head>
       <body>
+        <nav>
+          <input type="button" value="뒤로가기" onclick="history.back(-1)";>
+        </nav>
         <div class="info">
         <p><image src="Seokgye.png" width=70% height=70%></p>
           소요시간은 최소시간이므로 교통상황에 따라 더 걸릴 수 있습니다.
@@ -63,23 +85,21 @@
           <p style="font-size : 10px">월계삼거리<br>
           광운대역<br>월계현대아파트<br>물류센터<br>석계역</p>
         </details>
-
         <div class="map">
         <div align = center>
-        <div id="daumRoughmapContainer1591926113737" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js">
-        </script>
-        <!-- 3. 실행 스크립트 -->
-        <script charset="UTF-8">
-        	new daum.roughmap.Lander({
+         <div id="daumRoughmapContainer1591926113737" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+         <script charset="UTF-8" class="daum_roughmap_loader_script"
+         src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js">
+         </script>
+         <script charset="UTF-8">
+         	new daum.roughmap.Lander({
         		"timestamp" : "1591926113737",
         		"key" : "yrgo",
         		"mapWidth" : "300",
         		"mapHeight" : "300"
         	}).render();
-        </script>
-          </div>
-          </div>
+         </script>
+        </div>
+        </div>
   </body>
 </html>

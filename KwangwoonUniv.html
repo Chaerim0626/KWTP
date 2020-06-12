@@ -4,9 +4,10 @@
     <title>Kwangwoon</title>
     <meta charset="utf-8"> <!-- UTF-8이라는 방식으로 저장됨 -->
     <meta name="viewport" content="width=device-width, height=divice-height, initial-scale=1.0, user-scalable=no,
- maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
- <!--모바일페이지크기조절메타태그-->
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
+    maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
+    <!--모바일페이지크기조절메타태그-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
+    rel="stylesheet">
     <style>
       html {
         -webkit-text-size-adjust: none;
@@ -27,12 +28,6 @@
         line-height: 30px;
         color : #828282;
         text-shadow : 0.5px 0.5px 0.5px #dcdcdc;
-
-      }
-      footer {
-        width : 100%;
-        height: 30px;
-        background-color: #eeeeee:
       }
       .info {
         text-align : center;
@@ -41,7 +36,6 @@
         color : #AAAAAA;
         padding-bottom : 3px;
       }
-
       .map {
         display: block;
         text-align : center;
@@ -74,7 +68,6 @@
         display: none;
         text-align : center;
         } /*마크없애기*/
-
       </style>
       </head>
       <body>
@@ -90,15 +83,11 @@
           <p style="font-size : 10px">월계삼거리<br>
           광운대역</p>
         </details>
-
         <div class="map">
         <div align = center>
-          <!-- * 카카오맵 - 지도퍼가기 -->
-          <!-- 1. 지도 노드 -->
           <div id="daumRoughmapContainer1591926558478" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-          <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-          <!-- 3. 실행 스크립트 -->
+          <script charset="UTF-8" class="daum_roughmap_loader_script"
+          src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
           <script charset="UTF-8">
           	new daum.roughmap.Lander({
           		"timestamp" : "1591926558478",
@@ -107,10 +96,7 @@
           		"mapHeight" : "300"
           	}).render();
           </script>
-          </div>
-          </div>
-      <footer>
-        &nbsp;안녕하세요
-      </footer>
+        </div>
+        </div>
   </body>
 </html>
