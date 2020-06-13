@@ -27,15 +27,14 @@
         background-color : white;
       }
       nav {
-        font-family: 'Nanum Gothic', sans-serif;
         width : 100%;
-        height : 40px;
-        text-align: center;
+        height : 48px;
         background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
       }
       #main_menu{
         margin: auto;
-        padding : 0 15px;
+        padding : 0 15px 3px 15px;
+        line-height: 45px;
         list-style : none;
         text-align: center;
       }
@@ -43,13 +42,18 @@
         display : inline-block;
       }
       #main_menu li a {
+        display : inline-block;
         font-size: 13px;
         color : white;
         text-align: center;
         text-decoration: none;
-        line-height: 40px;
         padding : 0 15px;
         text-shadow: 0.5px 0.5px 0.5px #EEEEEE;
+      }
+      #main_menu li a img {
+        padding-top : 2px;
+        max-width: 30px;
+        max-height: 30px;
       }
       footer {
         font-family: 'Nanum Gothic', sans-serif;
@@ -145,6 +149,11 @@
         border : none;
         outline : none;
       }
+      #main_info details summary li img {
+        max-width: 19px;
+        max-height: 13px;
+        line-height : 30px;
+      }
       #sub_info li {
         padding-bottom : 7px;
       }
@@ -164,7 +173,7 @@
   <body>
     <nav>
       <ul id ="main_menu">
-        <li> <a href="#">KWTP 사용가이드</a> </li>
+        <li> <a href="#">KWTP 사용가이드<image src="click.png"></a></li>
       <ul>
     </nav>
     <section>
@@ -453,25 +462,25 @@
     <ul id ="main_info">
       <details>
       <summary>
-       <li>첫차 정보 보기∇ </summary>
+       <li>첫차 정보 보기 <img src="arrow.png"> </summary>
        <ul id="sub_info">
          <li> <a href="#">중앙도서관 정류장 : 261(06:40) 1017(05:50), 1137(05:30)</a> </li>
-         <li> <a href="#">동해문화예술관 정류장 : 261(01:25) 1017(00:39), 1137(00:15) </a> </li>
+         <li> <a href="#">동해문화예술관 정류장 : 261(03:56) 1017(04:32), 1137(05:00), 1140(05:55)</a> </li>
        </ul>
        </li>
      </details>
      <details>
      <summary>
-      <li>막차 정보 보기∇ </summary>
+      <li>막차 정보 보기 <img src="arrow.png"> </summary>
       <ul id="sub_info">
-        <li> <a href="#">중앙도서관 정류장 : 261(03:56) 1017(04:32), 1137(05:00), 1140(05:55)</a> </li>
-        <li> <a href="#">동해문화예술관 정류장 : 261(22:37) 1017(23:22), 1137(23:42), 1140(00:50)</a> </li>
+        <li> <a href="#">중앙도서관 정류장 : 261(01:20) 1017(00:39), 1137(00:15) </a> </li>
+        <li> <a href="#">동해문화예술관 정류장 : 261(22:37) 1017(23:23), 1137(23:42), 1140(00:51)</a> </li>
       </ul>
       </li>
     </details>
       <details>
       <summary>
-      <li>버스 정보 보기∇</a> </summary>
+      <li>버스 정보 보기 <img src="arrow.png"> </summary>
       <ul id="sub_info">
         <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100043"
           aria-label="">261</a> </li>
@@ -483,7 +492,7 @@
      </details>
      <details>
      <summary>
-      <li>정류장 정보 보기∇ </summary>
+      <li>정류장 정보 보기 <img src="arrow.png"> </summary>
       <ul id="sub_info">
         <li> <a href="#">중앙도서관 정류장 (ID 11-285, 월계삼거리 방면)</a> </li>
         <li> <a href="#">동해문화예술관 정류장 (ID 11-335, 광운전자공고 방면)</a> </li>
@@ -492,7 +501,7 @@
     </details>
     <details>
       <summary>
-        <li>지하철 정보 보기∇</a> </summary>
+        <li>지하철 정보 보기 <img src="arrow.png"> </summary>
           <ul id="sub_info">
             <li> <a href="#">1호선</a> </li>
             <li> <a href="#">2호선</a> </li>
