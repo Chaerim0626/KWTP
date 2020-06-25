@@ -1,515 +1,544 @@
-<!DOCTYPE html> <!-- 이문서에는 HTML이 담겨있다 -->
+<!DOCTYPE html> <!--HTML5 문서(2장)-->
 <html>
   <head>
-    <title>KWTP</title>
-    <meta charset="utf-8"> <!-- UTF-8이라는 방식으로 저장됨 -->
+    <title>KWTP</title> <!--웹 페이지 타이틀 달기(2장)-->
+    <meta charset="utf-8"> <!--메타 데이터 삽입, UTF-8이라는 방식으로 저장됨(2징)-->
     <meta name="viewport" content="width=device-width, height=divice-height,
     initial-scale=1.0, user-scalable=no,
     maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
- <!--모바일 반응형 웹-->
+    <!--메타데이터 삽입, 모바일 반응형 웹(2장)-->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
-    <style>
-      input::-ms-input-placeholder {color:#a0a0a0;}
-      input::-webkit-input-placeholder {color :#a0a0a0;}
-      input::-moz-placeholder {color:#a0a0a0;}
-
-      html {
-        -webkit-text-size-adjust: none;
-        font-family: 'Nanum Gothic', sans-serif;
-        background-color : white;
-      }
-      nav {
-        width : 100%;
+  <!--메타 데이터 삽입, 구글 제공 폰트 사용(2장)-->
+    <style>  /* style태그로 스타일시트 작성 (4장)*/
+      header { /*태그이름 셀렉터(4장)*/
+        width : 100%; /*크기지정(4장)*/
         height : 57px;
         background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+        /*배경 그라데이션넣기(4장)*/
       }
-      #main_menu{
-        margin : auto;
-        padding-left : 10px;
-        list-style : none;
-        text-align: center;
+      #main_menu{ /*id 셀렉터(4장)*/
+        margin : auto; /*여백자동(4장)*/
+        padding-left : 10px; /*왼쪽패딩(4장)*/
+        list-style : none; /*리스트 스타일없음(5장)*/
+        text-align: center; /*텍스트정렬(4장)*/
       }
-      #main_menu li {
-        display : inline-block;
+      #main_menu li { /*id셀렉터, 자손 셀렉터(4장)*/
+        display : inline-block; /*인라인블록박스(5장)*/
       }
-      #main_menu li a {
-        font-family: 'Nanum Gothic', sans-serif;
-        font-size: 15px;
-        color : white;
-        text-align: center;
-        text-decoration: none;
-        padding : 0 15px;
-        text-shadow: 0.5px 0.5px 0.5px #EEEEEE;
+      #main_menu li a { /*id셀렉터, 자손 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size: 15px; /*폰트크기(4장)*/
+        color : white; /*텍스트색(4장)*/
+        text-align: center; /*텍스트정렬(4장)*/
+        text-decoration: none; /*텍스트밑줄제거(4장)*/
+        padding : 0 15px; /*상하/좌우패딩(4장)*/
+        text-shadow: 0.5px 0.5px 0.5px #EEEEEE; /*텍스트그림자(4장)*/
       }
-      #main_menu li a img {
-        padding-top : 6px;
-        max-width: 30px;
+      #main_menu li a img { /*id셀렉터, 자손 셀렉터(4장)*/
+        padding-top : 6px; /*윗패딩(4장)*/
+        max-width: 30px; /*최대크기지정*/
         max-height: 30px;
       }
-      footer {
-        font-family: 'Nanum Gothic', sans-serif;
+      nav { /*태그이름 셀렉터(4장)*/
+        width : 100%;
+        height : 40px;
+      }
+      nav h3 { /*자손셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size: 14px; /*폰트크기(4장)*/
+        padding-left : 30px; /*왼쪽패딩(4장)*/
+        text-align: left; /*텍스트정렬(4장)*/
+      }
+      nav h3 a { /*자손셀렉터(4장)*/
+        text-decoration: none; /*텍스트밑줄제거(4장)*/
+        color : #32BEBE; /*텍스트색(4장)*/
+      }
+      nav h3 a img { /*자손셀렉터(4장)*/
+        max-width: 30px; /*최대크기지정*/
+        max-height: 30px;
+      }
+      footer { /*태그이름 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
         clear : both; /*float 속성 해제*/
-        width: 100%;
+        width: 100%; /*크기지정(4장)*/
         height: 65px;
-        color : #EEEEEE;
+        color : #EEEEEE; /*텍스트색(4장)*/
         background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
-        text-decoration: none;
-        text-align: justify;
-        font-size : 10px;
+        /*배경 그라데이션넣기(4장)*/
+        text-align: justify; /*텍스트정렬(4장)*/
+        font-size : 10px; /*폰트크기(4장)*/
         padding-top: 0.7px;
         padding-bottom: 2px;
       }
-      p {
-        text-align : center;
-        padding-top : 10;
+      p { /*태그이름 셀렉터(4장)*/
+        text-align : center; /*텍스트정렬(4장)*/
+        padding-top : 10px; /*윗패딩(4장)*/
       }
-      .div1 {
-        text-align: center;
-        display: block;
-        margin-left: auto;
+      .div1 { /*class 셀렉터(4장)*/
+        text-align: center; /*텍스트정렬(4장)*/
+        display: block; /*블록박스(5장)*/
+        margin-left: auto; /*여백자동으로지정(4장)*/
         margin-right: auto;
         margin-top: auto;
         margin-bottom: auto;
-        padding-top : 10px;
+        padding-top : 10px; /*패딩지정(4장)*/
       }
-      .div2 {
-        display: block;
-        margin-left: auto;
+      .div2 { /*class 셀렉터(4장)*/
+        display: block;  /*블록박스(5장)*/
+        margin-left: auto; /*여백자동으로지정(4장)*/
         margin-right: auto;
         margin-top: auto;
-        margin-bottom: 10px;
-        height: 50px;
-        width: 80%; /*400px*/
-        border: 1px solid #32BEBE;
-        background-color : #ffffff;
-        border-radius: 10px;
+        margin-bottom: 10px; /*밑여백(4장)*/
+        height: 50px; /*박스크기지정(4장)*/
+        width: 80%;
+        border: 1px solid #32BEBE; /*테두리 선 두께와 색지정(4장)*/
+        background-color : #ffffff; /*배경색(4장)*/
+        border-radius: 10px; /*둥근박스만들기(4장)*/
       }
-      input {
-        width: 70%;
-        border : 0px;
-        font-size : 12px;
-        padding : 15px 10px 10px 10px;
-        outline: none;
-        float: left;
-        text-align: left;
-        border-radius: 10px;
+      input { /*태그이름 셀렉터(4장)*/
+        width: 70%; /*크기(4장)*/
+        border : 0px; /*테두리(4장)*/
+        font-size : 12px; /*폰트 크기(4장)*/
+        padding : 15px 10px 10px 10px; /*패딩(4장)*/
+        outline: none; /*클릭했을때 테두리없음*/
+        float: left; /*유통배치(5장)*/
+        text-align: left; /*텍스트정렬(4장)*/
+        border-radius: 10px /*둥근테두리(4장)*/
       }
-      button {
-        height : 100%;
+      button { /*태그이름 셀렉터(4장)*/
+        height : 100%; /*크기지정(4장)*/
         width: 20%;
-        border: 2px;
-        font-size : 14px;
+        border: 2px; /*테두리(4장)*/
+        font-size : 14px; /*폰트 크기(4장)*/
         background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
-        color: #ffffff;
-        outline: none;
-        float: right;
-        text-align: center;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        /*배경 그라데이션넣기(4장)*/
+        color: #ffffff; /*텍스트색(4장)*/
+        outline: none; /*클릭했을때 테두리없음*/
+        float: right; /*유동배치(5장)*/
+        text-align: center; /*텍스트정렬(4장)*/
+        border-top-right-radius: 10px; /*오른쪽위둥근테두리(4장)*/
+        border-bottom-right-radius: 10px; /*오른쪽아래둥근테두리(4장)*/
       }
-      .info {
-        margin-bottom: 10px;
-        float : left;
+      .info { /*class 셀렉터(4장)*/
+        margin-bottom: 10px; /*밑 여백(4장)*/
+        float : left; /*유통배치(5장)*/
       }
-      #main_info, #sub_info {
-        display : block;
-        list-style : none;
+      #main_info, #sub_info { /*id셀렉터(4장)*/
+        display : block; /*블록박스(5장)*/
+        list-style : none; /*리스트 스타일없음(5장)*/
       }
-      #main_info details {
-          margin-left: auto;
+      #main_info details { /*id셀렉터, 자손셀렉터 (4장)*/
+          margin-left: auto; /*여백자동(4장)*/
           margin-right: auto;
           margin-top: auto;
           margin-bottom: auto;
           padding-bottom : 3px;
       }
-      #main_info details summary {
-        height : 30px;
-        text-align: center;
-        line-height: 30px;
-        outline : none;
+      #main_info details summary { /*id셀렉터, 자손셀렉터 (4장)*/
+        height : 30px; /*크기지정(4장)*/
+        text-align: center; /*텍스트정렬(4장)*/
+        line-height: 30px; /*줄높이지정*/
+        outline : none; /*클릭했을때 테두리없음*/
       }
      #main_info  details summary::-webkit-details-marker {
-        display: none;
+        display: none; /*마크 없애기*/
         }
-      #main_info details summary li {
-        float : left;
-        font-family: 'Nanum Gothic', sans-serif;
-        color : #28B4B4;
-        font-size : 14px;
-        text-decoration: none;
-        border : none;
-        outline : none;
+      #main_info details summary li { /*id셀렉터, 자손셀렉터 (4장)*/
+        float : left; /*유통배치(5장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        color : #28B4B4; /*텍스트색(4장)*/
+        font-size : 14px; /*폰트크기(4장)*/
+        text-decoration: none; /*텍스트밑줄제거(4장)*/
+        border : none; /*테두리없음(4장)*/
+        outline : none; /*클릭했을때 테두리없음*/
       }
-      #main_info details summary li img {
-        max-width: 19px;
+      #main_info details summary li img { /*id셀렉터, 자손셀렉터 (4장)*/
+        max-width: 19px; /*최대크기지정*/
         max-height: 13px;
-        line-height : 30px;
+        line-height : 30px; /*줄높이지정*/
       }
-      #sub_info li {
-        padding-bottom : 7px;
-        font-family: 'Nanum Gothic', sans-serif;
-        font-size : 12px;
-        color : red;
+      #sub_info li { /*id셀렉터, 자손셀렉터 (4장)*/
+        padding-bottom : 7px; /*밑패딩(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size : 12px; /*폰트크기(4장)*/
+        color : red; /*텍스트색(4장)*/
       }
-      #sub_info li a {
-        font-family: 'Nanum Gothic', sans-serif;
-        color : #505050;
-        font-size : 13px;
-        text-decoration: none;
+      #sub_info li a { /*id셀렉터, 자손셀렉터 (4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        color : #505050; /*텍스트색(4장)*/
+        font-size : 13px; /*폰트크기(4장)*/
+        text-decoration: none; /*텍스트밑줄제거(4장)*/
       }
-      #sub_info li div {
-        height : 20px;
-        font-family: 'Nanum Gothic', sans-serif;
-        color : #505050;
-        font-size : 12px;
-        text-decoration: none;
-        border : none;
-        outline : none;
+      #sub_info li div { /*id셀렉터, 자손셀렉터 (4장)*/
+        height : 20px; /*크기지정(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        color : #505050; /*텍스트색(4장)*/
+        font-size : 12px; /*폰트크기(4장)*/
+        text-decoration: none; /*텍스트밑줄제거(4장)*/
+        border : none; /*테두리없음(4장)*/
+        outline : none; /*클릭시테두리없음*/
       }
     </style>
   </head>
   <body>
-    <nav>
-      <ul id ="main_menu">
+    <header> <!--상단바(3장)-->
+      <ul id ="main_menu"> <!--순서 없는 리스트(2장)-->
         <li> <a href="https://chaerim26.github.io/KWTP/guide.html">KWTP 사용가이드<image src="click.png"></a></li>
-      <ul>
+        <!--이미지 삽입, 리스트아이템 나타내기, 하이퍼링크 작성(2장)-->
+      </ul>
+    </header>
+    <nav> <!--목차(3장)-->
+     <h3><a href="https://chaerim26.github.io/KWTP/contents.html">목차 보기<image src="click.png"></a></h3>
     </nav>
-    <section>
-    <div calss="div1">
+    <section> <!--문서의 장 or 절을 구성(3장)-->
+    <div calss="div1"> <!--박스모델(4장)-->
     <p><image src="logo.png" width="70%" height="70%"></p></div>
-    <script>
-        function search() {
-          var search_value = document.getElementById('input').value;
-          switch(search_value) {
-            case "광운대역" :
-            alert("광운대역 노선 정보로 이동합니다");
+    <!--이미지 삽입(2장)-->
+    <script> //자바스크립트 코드작성(6장)
+        function search() { //search함수 작성(6장)
+          var search_value = document.getElementById("input").value;
+          //id값이 input인 DOM 객체로 리턴(8장)
+          switch(search_value) { //입력한 변수값에 따라 다른 실행(6장)
+            case "광운대역" : //입력한 값이 "광운대역"일때
+            alert("광운대역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/KwangwoonUniv.html";
-            break;
+            break; //switch문 종료
 
-            case "광운대" :
-            alert("광운대역 노선 정보로 이동합니다");
+            case "광운대" : //입력한 값이 "광운대"일때
+            alert("광운대역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/KwangwoonUniv.html";
-            break;
+            break; //switch문 종료
 
-            case "석계역" :
-            alert("석계역 노선 정보로 이동합니다");
+            case "석계역" : //입력한 값이 "석계역"일때
+            alert("석계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Seokgye.html";
-            break;
+            break; //switch문 종료
 
-            case "석계" :
-            alert("석계역 노선 정보로 이동합니다");
+            case "석계" : //입력한 값이 "석계역"일때
+            alert("석계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Seokgye.html";
-            break;
+            break; //switch문 종료
 
-            case "하계역" :
-            alert("하계역 노선 정보로 이동합니다");
+            case "하계역" : //입력한 값이 "하계역"일때
+            alert("하계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Hagye.html";
-            break;
+            break; //switch문 종료
 
-            case "하계" :
-            alert("하계역 노선 정보로 이동합니다");
+            case "하계" : //입력한 값이 "하계"일때
+            alert("하계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Hagye.html";
-            break;
+            break; //switch문 종료
 
-            case "중계역" :
-            alert("중계역 노선 정보로 이동합니다");
+            case "중계역" : //입력한 값이 "중계역"일때
+            alert("중계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Junggye.html";
-            break;
+            break; //switch문 종료
 
-            case "중계" :
-            alert("중계역 노선 정보로 이동합니다");
+            case "중계" : //입력한 값이 "중계"일때
+            alert("중계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Junggye.html";
-            break;
+            break; //switch문 종료
 
-            case "노원역" :
-            alert("노원역 노선 정보로 이동합니다");
+            case "노원역" : //입력한 값이 "노원역"일때
+            alert("노원역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Nowon.html";
-            break;
+            break; //switch문 종료
 
-            case "노원" :
-            alert("노원역 노선 정보로 이동합니다");
+            case "노원" : //입력한 값이 "노원"일때
+            alert("노원역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Nowon.html";
-            break;
+            break; //switch문 종료
 
-            case "마들역" :
-            alert("마들역 노선 정보로 이동합니다");
+            case "마들역" : //입력한 값이 "마들역"일때
+            alert("마들역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Madeul.html";
-            break;
+            break; //switch문 종료
 
-            case "마들" :
-            alert("마들역 노선 정보로 이동합니다");
+            case "마들" : //입력한 값이 "마들"일때
+            alert("마들역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Madeul.html";
-            break;
+            break; //switch문 종료
 
-            case "상계역" :
-            alert("상계역 노선 정보로 이동합니다");
+            case "상계역" : //입력한 값이 "상계역"일때
+            alert("상계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Sanggye.html";
-            break;
+            break; //switch문 종료
 
-            case "상계" :
-            alert("상계역 노선 정보로 이동합니다");
+            case "상계" : //입력한 값이 "상계"일때
+            alert("상계역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Sanggye.html";
-            break;
+            break; //switch문 종료
 
-            case "돌곶이역" :
-            alert("돌곶이역 노선 정보로 이동합니다");
+            case "돌곶이역" : //입력한 값이 "돌곶이역"일때
+            alert("돌곶이역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dolgoji.html";
-            break;
+            break; //switch문 종료
 
-            case "돌곶이" :
-            alert("돌곶이역 노선 정보로 이동합니다");
+            case "돌곶이" : //입력한 값이 "돌곶이"일때
+            alert("돌곶이역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dolgoji.html";
-            break;
+            break; //switch문 종료
 
-            case "회기역" :
-            alert("회기역 노선 정보로 이동합니다");
+            case "회기역" : //입력한 값이 "회기역"일때
+            alert("회기역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Hoegi.html";
-            break;
+            break; //switch문 종료
 
-            case "회기" :
-            alert("회기역 노선 정보로 이동합니다");
+            case "회기" : //입력한 값이 "회기"일때
+            alert("회기역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Hoegi.html";
-            break;
+            break; //switch문 종료
 
-            case "청량리역" :
-            alert("청량리역 노선 정보로 이동합니다");
+            case "청량리역" : //입력한 값이 "청량리역"일때
+            alert("청량리역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Cheongyangri.html";
-            break;
+            break; //switch문 종료
 
-            case "청량리" :
-            alert("청량리역 노선 정보로 이동합니다");
+            case "청량리" : //입력한 값이 "청량리"일때
+            alert("청량리역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Cheongyangri.html";
-            break;
+            break; //switch문 종료
 
-            case "제기동역" :
-            alert("제기동역 노선 정보로 이동합니다");
+            case "제기동역" : //입력한 값이 "제기동역"일때
+            alert("제기동역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Jegi_dong.html";
-            break;
+            break; //switch문 종료
 
-            case "제기동" :
-            alert("제기동역 노선 정보로 이동합니다");
+            case "제기동" : //입력한 값이 "제기동"일때
+            alert("제기동역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Jegi_dong.html";
-            break;
+            break; //switch문 종료
 
-            case "신설동역" :
-            alert("신설동역 노선 정보로 이동합니다");
+            case "신설동역" : //입력한 값이 "신설동역"일때
+            alert("신설동역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Sinseol_dong.html";
-            break;
+            break; //switch문 종료
 
-            case "신설동" :
-            alert("신설동역 노선 정보로 이동합니다");
+            case "신설동" : //입력한 값이 "신설동"일때
+            alert("신설동역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Sinseol_dong.html";
-            break;
+            break; //switch문 종료
 
-            case "동묘앞역" :
-            alert("동묘앞역 노선 정보로 이동합니다");
+            case "동묘앞역" : //입력한 값이 "동묘앞역"일때
+            alert("동묘앞역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dongmyo.html";
-            break;
+            break; //switch문 종료
 
-            case "동묘앞" :
-            alert("동묘역 노선 정보로 이동합니다");
+            case "동묘앞" : //입력한 값이 "동묘앞"일때
+            alert("동묘역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dongmyo.html";
-            break;
+            break; //switch문 종료
 
-            case "동대문역" :
-            alert("동대문역 노선 정보로 이동합니다");
+            case "동대문역" : //입력한 값이 "동대문역"일때
+            alert("동대문역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dongdaemun.html";
-            break;
+            break; //switch문 종료
 
-            case "동대문" :
-            alert("동대문역 노선 정보로 이동합니다");
+            case "동대문" : //입력한 값이 "동대문"일때
+            alert("동대문역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dongdaemun.html";
-            break;
+            break; //switch문 종료
 
-            case "동대문역사문화공원역" :
-            alert("동대문역사문화공원역 노선 정보로 이동합니다");
+            case "동대문역사문화공원역" : //입력한 값이 "동대문역사문화공원역"일때
+            alert("동대문역사문화공원역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dongdaemun_history_culture_park.html";
-            break;
+            break; //switch문 종료
 
-            case "동대문역사문화공원" :
-            alert("동대문역사문화공원역 노선 정보로 이동합니다");
+            case "동대문역사문화공원" : //입력한 값이 "동대문역사문화공원"일때
+            alert("동대문역사문화공원역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Dongdaemun_history_culture_park.html";
-            break;
+            break; //switch문 종료
 
-            case "을지로4가역" :
-            alert("을지로4가역 노선 정보로 이동합니다");
+            case "을지로4가역" : //입력한 값이 "을지로4가역"일때
+            alert("을지로4가역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Euljiro_4ga.html";
-            break;
+            break; //switch문 종료
 
-            case "을지로4가" :
-            alert("을지로4가역 노선 정보로 이동합니다");
+            case "을지로4가" : //입력한 값이 "을지로4가"일때
+            alert("을지로4가역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Euljiro_4ga.html";
-            break;
+            break; //switch문 종료
 
-            case "을지로3가역" :
-            alert("을지로3가역 노선 정보로 이동합니다");
+            case "을지로3가역" : //입력한 값이 "을지로3가역"일때
+            alert("을지로3가역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Euljiro_3ga.html";
-            break;
+            break; //switch문 종료
 
-            case "을지로3가" :
-            alert("을지로3가역 노선 정보로 이동합니다");
+            case "을지로3가" : //입력한 값이 "을지로3가"일때
+            alert("을지로3가역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Euljiro_3ga.html";
-            break;
+            break; //switch문 종료
 
-            case "을지로입구역" :
-            alert("을지로입구역 노선 정보로 이동합니다");
+            case "을지로입구역" : //입력한 값이 "을지로입구역"일때
+            alert("을지로입구역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Euljiro_entry.html";
-            break;
+            break; //switch문 종료
 
-            case "을지로입구" :
-            alert("을지로입구역 노선 정보로 이동합니다");
+            case "을지로입구" : //입력한 값이 "을지로입구"일때
+            alert("을지로입구역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Euljiro_entry.html";
-            break;
+            break; //switch문 종료
 
-            case "공덕역" :
-            alert("공덕역 노선 정보로 이동합니다");
+            case "공덕역" : //입력한 값이 "공덕역"일때
+            alert("공덕역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Gongdeok.html";
-            break;
+            break; //switch문 종료
 
-            case "공덕" :
-            alert("공덕역 노선 정보로 이동합니다");
+            case "공덕" : //입력한 값이 "공덕"일때
+            alert("공덕역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Gongdeok.html";
-            break;
+            break; //switch문 종료
 
-            case "마포역" :
-            alert("마포역 노선 정보로 이동합니다");
+            case "마포역" : //입력한 값이 "마포역"일때
+            alert("마포역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Mapo.html";
-            break;
+            break; //switch문 종료
 
-            case "마포" :
-            alert("마포역 노선 정보로 이동합니다");
+            case "마포" : //입력한 값이 "마포"일때
+            alert("마포역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Mapo.html";
-            break;
+            break; //switch문 종료
 
-            case "여의나루역" :
-            alert("여의나루역 노선 정보로 이동합니다");
+            case "여의나루역" : //입력한 값이 "여의나루역"일때
+            alert("여의나루역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Yeouinaru.html";
-            break;
+            break; //switch문 종료
 
-            case "여의나루" :
-            alert("여의나루역 노선 정보로 이동합니다");
+            case "여의나루" : //입력한 값이 "여의나루"일때
+            alert("여의나루역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Yeouinaru.html";
-            break;
+            break; //switch문 종료
 
-            case "샛강역" :
-            alert("샛강역 노선 정보로 이동합니다");
+            case "샛강역" : //입력한 값이 "샛강역"일때
+            alert("샛강역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Saetgang.html";
-            break;
+            break; //switch문 종료
 
-            case "샛강" :
-            alert("샛강역 노선 정보로 이동합니다");
+            case "샛강" : //입력한 값이 "샛강"일때
+            alert("샛강역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Saetgang.html";
-            break;
+            break; //switch문 종료
 
-            case "여의도역" :
-            alert("여의도역 노선 정보로 이동합니다");
+            case "여의도역" : //입력한 값이 "여의도역"일때
+            alert("여의도역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Yeouido.html";
-            break;
+            break; //switch문 종료
 
-            case "여의도" :
-            alert("여의도역 노선 정보로 이동합니다");
+            case "여의도" : //입력한 값이 "여의도"일때
+            alert("여의도역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Yeouido.html";
-            break;
+            break; //switch문 종료
 
-            case "고려대역" :
-            alert("고려대역 노선 정보로 이동합니다");
+            case "고려대역" : //입력한 값이 "고려대역"일때
+            alert("고려대역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/KoreaUniv.html";
-            break;
+            break; //switch문 종료
 
-            case "고려대" :
-            alert("고려대역 노선 정보로 이동합니다");
+            case "고려대" : //입력한 값이 "고려대"일때
+            alert("고려대역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/KoreaUniv.html";
-            break;
+            break; //switch문 종료
 
-            case "상왕십리역" :
-            alert("상왕십리역 노선 정보로 이동합니다");
+            case "상왕십리역" : //입력한 값이 "상왕십리역"일때
+            alert("상왕십리역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Sangwangsimni.html";
-            break;
+            break; //switch문 종료
 
-            case "상왕십리" :
-            alert("상왕십리역 노선 정보로 이동합니다");
+            case "상왕십리" : //입력한 값이 "상왕십리"일때
+            alert("상왕십리역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Sangwangsimni.html";
-            break;
+            break; //switch문 종료
 
-            case "미아사거리역" :
-            alert("미아사거리역 노선 정보로 이동합니다");
+            case "미아사거리역" : //입력한 값이 "미아사거리역"일때
+            alert("미아사거리역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Miasageori.html";
-            break;
+            break; //switch문 종료
 
-            case "미아사거리" :
-            alert("미아사거리역 노선 정보로 이동합니다");
+            case "미아사거리" : //입력한 값이 "미아사거리"일때
+            alert("미아사거리역 노선 정보로 이동합니다"); //다이얼로그(6장)
             location.href="https://chaerim26.github.io/KWTP/Miasageori.html";
-            break;
+            break; //switch문 종료
 
-            case "" :
-            alert("지하철 역을 입력해주세요!");
-            break;
+            case "" : //아무역도 입력하지 않고 검색버튼을 누른 경우
+            alert("지하철 역을 입력해주세요!"); //다이얼로그(6장)
+            break; //switch문 종료
 
-            default :
-            alert("해당 역으로 한 번에 가는 버스 노선이 없습니다!");
+            default : //그외의 값을 입력한 경우
+            alert("해당 역으로 한 번에 가는 버스 노선이 없습니다!"); //다이얼로그(6장)
           }
         }
     </script>
-    <form>
-      <div class="div2">
+    <form> <!--검색창 폼만들기(3장)-->
+      <div class="div2"> <!--박스모델(4장)-->
         <input type="text" id="input" placeholder="검색어입력 : 예)광운대역, 광운대">
+        <!--한 줄 텍스트 입력창, 검색어 힌트 제공(3장)-->
         <button type="button" onclick="search()">검색</button>
+        <!-- 검색버튼 구현(3장), 이벤트리스너 속성에 자바스크립트 코드 작성(6장), onclick 리스너(9장)-->
       </div>
     </form>
-    <div class="info">
-    <ul id ="main_info">
-      <details>
+    <div class="info"> <!--박스모델(4장)-->
+    <ul id ="main_info"> <!--순서 없는 리스트(2장)-->
+      <details> <!--목록 보거나 숨기기(3장)-->
       <summary>
        <li>첫차 시간 보기 <img src="arrow.png"> </summary>
-       <ul id="sub_info">
+      <!--이미지 삽입(2장)-->
+       <ul id="sub_info"> <!--순서 없는 리스트(2장)-->
          <li> <a href="#">중앙도서관 정류장 : <strong>261</strong>(06:40)<br>
+           <!--리스트 아이템 나타대기, 줄바꾸기, 텍스트 강조(2장)-->
            <strong>1017</strong>(05:50) <strong>1137</strong>(05:30)</a> </li>
          <li> <a href="#">동해문화예술관 정류장 : <strong>261</strong>(03:56)<br>
            <strong>1017</strong>(04:32) <strong>1137</strong>(05:00) <strong>1140</strong>(05:55)</a> </li>
        </ul>
        </li>
      </details>
-     <details>
+     <details> <!--목록 보거나 숨기기(3장)-->
      <summary>
       <li>막차 시간 보기 <img src="arrow.png"></summary>
-      <ul id="sub_info">
+      <!--리스트 아이템 나타내기, 이미지 삽입(2장)-->
+      <ul id="sub_info"> <!--순서 없는 리스트(2장)-->
         <li> <a href="#">중앙도서관 정류장 : <strong>261</strong>(01:20)<br>
+        <!--리스트 아이템 나타대기(2장)-->
           <strong>1017</strong>(00:39) <strong>1137</strong>(00:15)</a> </li>
         <li> <a href="#">동해문화예술관 정류장 : <strong>261</strong>(22:37)<br>
           <strong>1017</strong>(23:23) <strong>1137</strong>(23:42) <strong>1140</strong>(00:51)</a> </li>
       </ul>
       </li>
     </details>
-      <details>
+    <details> <!--목록 보거나 숨기기(3장)-->
       <summary>
       <li>버스 정보 보기 <img src="arrow.png"> </summary>
-      <ul id="sub_info">
-        <li>원하시는 노선번호를 클릭해주세요!</li>
+      <!--리스트 아이템 나타내기, 이미지 삽입(2장)-->
+      <ul id="sub_info"> <!--순서 없는 리스트(2장)-->
+        <li>원하시는 노선번호를 클릭해주세요!</li> <!--리스트 아이템 나타대기(2장)-->
         <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100043"
           aria-label="">261</a> </li>
         <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100130">1017</a> </li>
         <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100152">1137</a> </li>
         <li> <a href="https://topis.seoul.go.kr/map/openPopBusRoute.do?routId=100100155">1140</a> </li>
+        <!--리스트 아이템 나타내기, 하이퍼링크 작성(2장)-->
       </ul>
      </li>
      </details>
-     <details>
+     <details> <!--목록 보거나 숨기기(3장)-->
      <summary>
       <li>정류장 사진 보기 <img src="arrow.png"> </summary>
-      <ul id="sub_info">
-        <li>원하시는 정류장을 클릭해주세요!</li>
+      <!--리스트 아이템 나타내기, 이미지 삽입(2장)-->
+      <ul id="sub_info"> <!--순서 없는 리스트(2장)-->
+        <li>원하시는 정류장을 클릭해주세요!</li> <!--리스트 아이템 나타대기(2장)-->
         <li> <a href="https://chaerim26.github.io/KWTP/busstop_L.html">중앙도서관 정류장<br>(ID 11-285, 월계삼거리 방면)</a> </li>
         <li> <a href="https://chaerim26.github.io/KWTP/busstop_D.html">동해문화예술관 정류장<br>(ID 11-335, 광운전자공고 방면)</a> </li>
       </ul>
       </li>
     </details>
-    <details>
+    <details> <!--목록 보거나 숨기기(3장)-->
       <summary>
         <li>지하철 정보 보기 <img src="arrow.png"></summary>
-          <ul id="sub_info">
+        <!--리스트 아이템 나타내기, 이미지 삽입(2장)-->
+          <ul id="sub_info"> <!--순서 없는 리스트(2장)-->
             <li>학교 앞 정류장에서 버스로 한 번에 갈 수 있는 역입니다.
-              <br>[ ()안은 버스소요시간을 나타냄 ]</li><br>
+              <br>[ ()안은 버스소요시간을 나타냄 ]</li><br> <!--리스트 아이템 나타대기(2장)-->
             <li><strong><span style="color:#0D3692">1호선</span></strong><br>
+            <!--span 스타일태그(4장)-->
             <div>광운대역(2분) 석계역(6분)<br>
             회기역(19분) 청량리역(26분) 제기동역(30분)<br>
             신설동역(33분) 동묘앞역(35분) 동대문역(37분)</div></li><br><br>
@@ -546,14 +575,14 @@
             <li><strong><span style="color:#FF8C00">분당선</span></strong><br>
             <div>청량리역(26분)</div></li>
           </details>
-       <ul>
+       </ul>
     </diV>
    </section>
-  <footer>
-    <p>
-      email : dasapcr@gmail.com<br>
+  <footer> <!--페이지의 꼬리말(3장)-->
+    <p> <!--단락나누기(2장)-->
+      email : dasapcr@gmail.com<br> <!--줄 바꾸기(2장)-->
       github : <a href="https://github.com/chaerim26/KWTP">
-      https://github.com/chaerim26/KWTP</a><br>
+      https://github.com/chaerim26/KWTP</a><br> <!-- 하이퍼링크 작성(2장)-->
       Copyright 2020. CHAERIM PARK All Rights Reserved.
     </p>
   </footer>
