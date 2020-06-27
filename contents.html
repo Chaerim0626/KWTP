@@ -1,0 +1,209 @@
+<!DOCTYPE html> <!--HTML5 문서(2장)-->
+<html>
+  <head>
+    <title>목차</title> <!--웹 페이지 타이틀 달기(2장)-->
+    <meta charset="utf-8"> <!--메타 데이터 삽입, UTF-8이라는 방식으로 저장됨(2징)-->
+    <meta name="viewport" content="width=device-width, height=divice-height,
+    initial-scale=1.0, user-scalable=no,
+    maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
+    <!--메타데이터 삽입, 모바일 반응형 웹(2장)-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
+    rel="stylesheet">
+    <!--메타 데이터 삽입, 구글 제공 폰트 사용(2장)-->
+    <style>
+      header { /*태그 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        padding-left : 20px; /*왼쪽패딩(4장)*/
+        text-align: center; /*텍스트정렬(4장)*/
+      }
+      header p { /*자손 셀렉터(4장)*/
+        font-size : 13px; /*폰트크기(4장)*/
+      }
+      header button { /*자손 셀렉터(4장)*/
+        width : 100%; /*크기지정(4장)*/
+        height : 35px;
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        padding : 0 5px; /*상하/좌우패딩(4장)*/
+        border : none;  /*테두리없음(4장)*/
+        outline : none;  /*클릭시테두리없음(4장)*/
+        text-align: left; /*텍스트정렬(4장)*/
+        line-height: 35px; /*줄높이지정*/
+        font-size : 14px; /*폰트크기(4장)*/
+        color : #828282; /*텍스트색(4장)*/
+        text-shadow : 0.5px 0.5px 0.5px #dcdcdc; /*텍스트그림자(4장)*/
+      }
+      #first { /*id셀렉터(4장)*/
+        padding-left : 30px; /*왼쪽패딩(4장)*/
+        padding-bottom : 10px; /*밑패딩(4장)*/
+      }
+      #second, #third { /*id셀렉터(4장)*/
+        padding-top : 10px; /*위아래패딩(4장)*/
+        padding-bottom : 10px;
+      }
+      #first li, #second li, #third li {
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size : 14px; /*폰트크기(4장)*/
+      }
+      .tech { /*class 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size : 12px; /*폰트크기(4장)*/
+        padding : 10px;
+      }
+      #first  details summary::-webkit-details-marker {
+         display: none; /*마크 없애기*/
+         }
+      #second  details summary::-webkit-details-marker {
+        display: none; /*마크 없애기*/
+        }
+      #third  details summary::-webkit-details-marker {
+          display: none; /*마크 없애기*/
+          }
+      </style>
+      </head>
+      <body>
+        <header> <!--상단바(3장)-->
+          <button onclick="history.back(-1)">뒤로가기</button>
+          <!--뒤로가기버튼(3장),
+          이벤트리스너 속성에 자바스크립트 코드 작성(6장), onclick 리스너(9장)-->
+          <h1><span style="color:#32BEBE">목차</span></h1>
+          <!--제목 작성(2장), span 스타일태그(4장)-->
+          <div align="left"> <!--왼쪽정렬-->
+          <p>KWTP의 페이지들을 리스트로 나타내었고, 페이지명.html을 누르면 각 페이지로 이동합니다.
+             <br>그리고 페이지명을 누르면 각 장의 어떤 기술이 사용되었는지 내용이 펼쳐집니다.</p></div>
+        </header>
+        <section> <!--문서의 장 or 절을 구성(3장)-->
+        <ul id ="first">  <!--순서 없는 리스트(2장)-->
+          <details> <!--목록 보거나 숨기기(3장)-->
+          <summary><li>메인페이지(<a href ="https://chaerim26.github.io/KWTP/index.html">
+            index.html</a>)</summary>
+          <div class="tech">2장의 &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;,
+          &lt;title&gt;, &lt;body&gt;, &lt;p&gt;, &lt;br&gt;, &lt;strong&gt;, &lt;div&gt;,
+          &lt;link&gt;, &lt;style&gt;, &lt;script&gt;, &lt;meta&gt;, &lt;img&gt;, &lt;ul&gt;,
+           &lt;li&gt;, &lt;a&gt; 등의 태그 사용<br>3장의 &lt;header&gt;, &lt;nav&gt;,
+           &lt;section&gt;, &lt;footer&gt;, &lt;details&gt;, &lt;summary&gt;, &lt;form&gt;, &lt;input&gt;,
+           &lt;button&gt; 등의 태그 사용<br>4장의 &lt;style&gt; 태그로 스타일시트작성, style 속성에
+            스타일 시트 작성, 셀렉터, 색 표현 속성, 텍스트 꾸미기 속성, 폰트 제어 속성, 박스모델 속성 등 사용<br>
+            5장의 배운 블록박스와 인라인박스, 유동 배치, 리스트 꾸미기 속성 등 사용<br>
+            6장의 배운 &lt;script&gt; 태그로 자바스크립트 코드 작성, HTML 태그의 이벤트 리스너 속성에 코드 작성,
+            다이얼로그, 변수, switch문, break문, 함수 등 사용<br>
+            8장의 DOM객체, 9장의 배운 onclick 리스너<br>location 객체 등 사용
+         </div></li>
+        <!--리스트아이템 나타내기, 하이퍼링크 작성, 문자입력(2장)-->
+       </details>
+          <ul id="second">
+            <details>
+              <summary>
+            <li>사용가이드 페이지(<a href ="https://chaerim26.github.io/KWTP/guide.html">
+              guide.html</a>)</summary>
+            <div class="tech">  <!--박스모델(4장)-->
+              2장의 &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt;,
+               &lt;body&gt;, &lt;h2&gt;, &lt;p&gt;, &lt;br&gt;, &lt;link&gt;, &lt;style&gt;,
+               &lt;meta&gt;, &lt;img&gt; 등의 태그 사용<br>3장의 &lt;header&gt;, &lt;section&gt;, &lt;article&gt;,
+               &lt;button&gt; 등의 태그 사용<br>4장의 &lt;style&gt; 태그로 스타일시트 작성,
+               셀렉터, 색 표현 속성, 텍스트 꾸미기 속성, 폰트 제어 속성, 크기 관련 속성 등 사용<br>
+               5장의 블록박스와 인라인 박스, 6장의 HTML 태그의 이벤트 리스너 속성에 코드 작성,
+               9장의 onclick 리스너 등 사용</div>
+            </li>
+          </details>
+          <details>
+            <summary>
+            <li>목차 페이지(<a href ="https://chaerim26.github.io/KWTP/contents.html">
+              contents.html</a>)</summary>
+              <div class="tech">
+              2장의 &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt;,
+               &lt;body&gt;, &lt;h1&gt;, &lt;p&gt;, &lt;br&gt;, &lt;link&gt;, &lt;style&gt;,
+               &lt;meta&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;a&gt; 등의 태그 사용<br>3장의 &lt;header&gt;, &lt;section&gt;,
+               &lt;button&gt; 등의 태그 사용<br>4장의 &lt;style&gt; 태그로 스타일시트 작성,
+               style 속성에 스타일 시트 작성, 셀렉터, 색 표현 속성, 텍스트 꾸미기 속성, 폰트 제어 속성, 크기 관련 속성 등 사용<br>
+               6장의 HTML 태그의 이벤트 리스너 속성에 코드 작성,
+               9장의 onclick 리스너 등 사용</div>
+            </li>
+          </details>
+          <details>
+          <summary>
+            <li>정류장 정보 보기의 하위 목록 페이지
+              (<a href ="https://chaerim26.github.io/KWTP/contents.html">busstop_D.html</a>,
+              <a href ="https://chaerim26.github.io/KWTP/contents.html">busstop_L.html</a>)
+            </summary>
+            <div class="tech">
+              2장에서의  &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt;,
+               &lt;body&gt;, &lt;p&gt;, &lt;br&gt;, &lt;link&gt;, &lt;meta&gt;,
+               &lt;img&gt; 등의 태그 사용<br>3장의 &lt;header&gt;, &lt;button&gt; 등의 태그 사용<br>
+               4장의 &lt;style&gt; 태그로 스타일시트 작성,
+               셀렉터, 색 표현 속성, 텍스트 꾸미기 속성, 폰트 제어 속성, 크기 관련 속성 등 사용<br>
+               6장의 HTML 태그의 이벤트 리스너 속성에 코드 작성, 9장의 onclick 리스너 등 사용</div>
+            </li>
+          </details>
+          <details>
+          <summary>
+            <li>검색 후 이동하는 페이지</summary>
+            <div class="tech">
+              광운대역부터 미아사거리역까지의 26개 페이지의 코드 구조는 동일하기에 한 번에 묶어서 기술 설명<br>
+              2장에서의  &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt;,
+               &lt;body&gt;, &lt;p&gt;, &lt;link&gt;, &lt;meta&gt;,&lt;img&gt; 등의 태그 사용<br>
+               3장의 &lt;header&gt;, &lt;section&gt; &lt;button&gt; 등의 태그 사용<br>
+               4장의 &lt;style&gt; 태그로 스타일시트 작성, style 속성에 스타일 시트 작성,
+               셀렉터, 색 표현 속성, 텍스트 꾸미기 속성, 폰트 제어 속성, 크기 관련 속성 등 사용<br>
+               5장의 블록박스와 인라인박스 속성, 6장의 HTML 태그의 이벤트 리스너 속성에 코드 작성 등 사용<br>
+              9장의 onclick 리스너 등 사용</div>
+            </li>
+          </details>
+            <ul id ="third">
+              <li>광운대역 페이지(<a href ="https://chaerim26.github.io/KWTP/KwangwoonUniv.html">
+                KwangwoonUniv.html</a>)</li>
+              <li>석계역 페이지(<a href ="https://chaerim26.github.io/KWTP/Seokgye.html">
+                Seokgye.html</a>)</li>
+              <li>하계역 페이지(<a href ="https://chaerim26.github.io/KWTP/Hagye.html">
+                Hagye.html</a>)</li>
+              <li>중계역 페이지(<a href ="https://chaerim26.github.io/KWTP/Junggye.html">
+                Junggye.html</a>)</li>
+              <li>노원역 페이지(<a href ="https://chaerim26.github.io/KWTP/Nowon.html">
+                Nowon.html</a>)</li>
+              <li>마들역 페이지(<a href ="https://chaerim26.github.io/KWTP/Madeul.html">
+                Madeul.html</a>)</li>
+              <li>상계역 페이지(<a href ="https://chaerim26.github.io/KWTP/Sanggye.html">
+                Sanggye.html</a>)</li>
+              <li>돌곶이역 페이지(<a href ="https://chaerim26.github.io/KWTP/Dolgoji.html">
+                Dolgoji.html</a>)</li>
+              <li>회기역 페이지(<a href ="https://chaerim26.github.io/KWTP/Hoegi.html">
+                Hoegi.html</a>)</li>
+              <li>청량리역 페이지(<a href ="https://chaerim26.github.io/KWTP/Cheongyangri.html">
+                Cheongyangri.html</a>)</li>
+              <li>제기동역 페이지(<a href ="https://chaerim26.github.io/KWTP/Jegi_dong.html">
+                Jegi_dong.html</a>)</li>
+              <li>신설동역 페이지(<a href ="https://chaerim26.github.io/KWTP/Sinseol_dong.html">
+                Sinseol_dong.html</a>)</li>
+              <li>동묘앞역 페이지(<a href ="https://chaerim26.github.io/KWTP/Dongmyo.html">
+                Dongmyo.html</a>)</li>
+              <li>동대문역 페이지(<a href ="https://chaerim26.github.io/KWTP/Dongdaemun.html">
+                Dongdaemun.html</a>)</li>
+              <li>동대문역사문화공원역 페이지(<a href ="https://chaerim26.github.io/KWTP/Dongdaemun_history_culture_park.html">
+                Dongdaemun_history_culture_park.html</a>)</li>
+              <li>을지로4가역 페이지(<a href ="https://chaerim26.github.io/KWTP/Euljiro_4ga.html">
+                Euljiro_4ga.html</a>)</li>
+              <li>을지로3가역 페이지(<a href ="https://chaerim26.github.io/KWTP/Euljiro_3ga.html">
+                Euljiro_3ga.html</a>)</li>
+              <li>을지로입구역 페이지(<a href ="https://chaerim26.github.io/KWTP/Euljiro_entry.html">
+                Euljiro_entry.html</a>)</li>
+              <li>공덕역 페이지(<a href ="https://chaerim26.github.io/KWTP/Gongdeok.html">
+                Gongdeok.html</a>)</li>
+              <li>마포역 페이지(<a href ="https://chaerim26.github.io/KWTP/Mapo.html">
+                Mapo.html</a>)</li>
+              <li>여의나루역 페이지(<a href ="https://chaerim26.github.io/KWTP/Yeouinaru.html">
+                Yeouinaru.html</a>)</li>
+              <li>샛강역 페이지(<a href ="https://chaerim26.github.io/KWTP/Saetgang.html">
+                Saetgang.html</a>)</li>
+              <li>여의도역 페이지(<a href ="https://chaerim26.github.io/KWTP/Yeouido.html">
+                Yeouido.html</a>)</li>
+              <li>고려대역 페이지(<a href ="https://chaerim26.github.io/KWTP/KoreaUniv.html">
+                KoreaUniv.html</a>)</li>
+              <li>상왕십리역 페이지(<a href ="https://chaerim26.github.io/KWTP/Sangwangsimni.html">
+                Sangwangsimni.html</a>)</li>
+              <li>미아사거리역 페이지(<a href ="https://chaerim26.github.io/KWTP/Miasageori.html">
+                Miasageori.html</a>)</li>
+            </ul>
+          </ul>
+        </ul>
+      </section>
+  </body>
+</html>
