@@ -1,84 +1,86 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--HTML5 문서(2장)-->
 <html>
   <head>
-    <title>KWTP_Guide</title>
-    <meta charset="utf-8"> <!-- UTF-8이라는 방식으로 저장됨 -->
+    <title>KWTP Guide</title> <!--웹 페이지 타이틀 달기(2장)-->
+    <meta charset="utf-8"> <!--메타 데이터 삽입, UTF-8이라는 방식으로 저장됨(2징)-->
     <meta name="viewport" content="width=device-width, height=divice-height, initial-scale=1.0, user-scalable=no,
     maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
-    <!--모바일페이지크기조절메타태그-->
+    <!--메타데이터 삽입, 모바일 반응형 웹(2장)-->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
     rel="stylesheet">
-    <style>
-      html {
-        -webkit-text-size-adjust: none;
-        background-color : white;
-      }
-      nav {
+    <!--메타 데이터 삽입, 구글 제공 폰트 사용(2장)-->
+    <style> /* style태그로 스타일시트 작성 (4장)*/
+      header { /*태그이름 셀렉터(4장)*/
         background-color : #eeeeee;
-        width : 100%;
+        width : 100%; /*크기지정(4장)*/
         height : 59px;
-        border : none;
-        text-align: center;
-        display: inline-block;
+        border : none; /*선없음(4장)*/
+        text-align: center; /*텍스트정렬(4장)*/
+        display: inline-block; /*인라인블록박스(5장)*/
       }
-      nav button {
-        font-family: 'Nanum Gothic', sans-serif;
-        padding : 0 5px;
-        border : none;
-        outline : none;
-        text-align: center;
-        line-height: 59px;
-        font-size : 15px;
-        color : #828282;
-        text-shadow : 0.5px 0.5px 0.5px #dcdcdc;
+      header button { /*자손셀렉터 (4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        padding : 0 5px; /*상하/좌우패딩(4장)*/
+        border : none; /*선없음(4장)*/
+        outline : none; /*클릭시선없음*/
+        text-align: center; /*텍스트정렬(4장)*/
+        line-height: 59px; /*줄높이*/
+        font-size : 15px; /*폰트크기(4장)*/
+        color : #828282; /*폰트색(4장)*/
+        text-shadow : 0.5px 0.5px 0.5px #dcdcdc; /*텍스트그림자(4장)*/
       }
-      nav button img {
-        padding-top : 5px;
-        max-width: 26px;
+      nav button img { /*자손셀렉터 (4장)*/
+        padding-top : 5px; /*윗패딩(4장)*/
+        max-width: 26px; /*최대크기지정*/
         max-height: 26px;
       }
-      h2 {
-        font-family: 'Nanum Gothic', sans-serif;
-        font-size : 25px;
-        padding-left : 20px;
-        text-shadow : 1px 1px 1px #AAAAAA;
+      h2 { /*태그이름 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size : 25px; /*폰트크기(4장)*/
+        padding-left : 20px; /*왼쪽패딩(4장)*/
+        text-shadow : 1px 1px 1px #AAAAAA; /*텍스트그림자(4장)*/
       }
-      p {
-        font-family: 'Nanum Gothic', sans-serif;
-        padding-left: 20px;
-        font-size : 15px;
+      p { /*태그이름 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        padding-left: 20px; /*왼쪽패딩(4장)*/
+        font-size : 15px; /*폰트크기(4장)*/
       }
-
       </style>
       </head>
       <body>
-        <nav>
+        <header> <!--상단바(3장)-->
           <button onclick="history.back(-1)">홈으로가기<image src="click2.png"></button>
-        </nav>
-        <section>
-          <article>
-            <h2>KWTP란?</h2>
+          <!--이미지 삽입(2장), 홈으로가기버튼(3장),
+          이벤트리스너 속성에 자바스크립트 코드 작성(6장), onclick 리스너(9장)-->
+        </header>
+        <section> <!--문서의 장 or 절을 구성(3장)-->
+          <article> <!--독립적 콘텐츠 담기 (3장)-->
+            <h2>KWTP란?</h2> <!--문단에제목달기(2장)-->
             <p>KWTP는 Kwangwoon University Transfer Program, 광운대학교 환승프로그램의 약자입니다.<br>
             이 사이트는 광운대학교 앞의 2개의 정류장을 이용하는 사람들이<br> 보다 편리한 길찾기를 할 수 있도록 돕기위해 제작되었습니다.<br>
             해당 사이트는 버스로 한 번에 갈 수 있는 지하철역 길찾기 정보만 제공하고 있습니다.
           </article>
-          <article>
-            <h2>사용법</h2>
+          <article> <!--독립적 콘텐츠 담기 (3장)-->
+            <h2>사용법</h2> <!--문단에제목달기(2장)-->
             <p>원하는 지하철 역으로 가고 싶을 경우, 검색창에 원하는 검색어를 입력하세요.<br>
             검색한 지하철역으로 가는 버스 노선이 존재하면, 해당 노선을 볼 수 있습니다.<br>
             뒤로가기 버튼을 누르면 다시 홈 페이지로 이동합니다.</p>
           </article>
-          <article>
-            <h2>홈 페이지 각종 정보</h2>
+          <article> <!--독립적 콘텐츠 담기 (3장)-->
+            <h2>홈 페이지 각종 정보</h2> <!--문단에제목달기(2장)-->
             <p><img src="info1.jpg" width="140" height="80"><br>정류장별 첫차와 막차시간을 알려줍니다.<br>
             시간은 교통상황에 따라 변경될 수 있습니다.</p>
+            <!--단락나누기, 줄바꾸기, 이미지 삽입(2장)-->
             <p> <img src="info2.jpg" width="130" height="40"><br>261, 1017, 1137, 1140번 버스정보를 알 수 있습니다.<br>
             원하는 노선번호를 선택하면 해당 버스의 상세정보를 확인할 수 있습니다.<br>
             원하는 버스를 선택하세요!</p>
-            <p> <img src="info3.jpg" width="140" height="25"><br>중앙도서관 정류장과 동해문화예술관 정류장의 사진을 볼 수 있습니다.<br>
+            <!--단락나누기, 줄바꾸기, 이미지 삽입(2장)-->
+            <p> <img src="info3.jpg" width="140" height="30"><br>중앙도서관 정류장과 동해문화예술관 정류장의 사진을 볼 수 있습니다.<br>
             원하는 정류장을 선택하세요!</p>
+            <!--단락나누기, 줄바꾸기, 이미지 삽입(2장)-->
             <p> <img src="info4.jpg" width="140" height="30"><br>학교 앞 버스 정류장에서 버스로 한 번에 갈 수 있는 지하철 노선입니다.<br>
             호선 별로 역이 여러 개일 경우, 버스 소요시간이 적은 순서대로 나타내었습니다.</p>
+            <!--단락나누기, 줄바꾸기, 이미지 삽입(2장)-->
           </article>
        </section>
   </body>

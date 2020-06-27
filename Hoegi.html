@@ -1,107 +1,110 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--HTML5 문서(2장)-->
 <html>
   <head>
-    <title>Hoegi</title>
-    <meta charset="utf-8"> <!-- UTF-8이라는 방식으로 저장됨 -->
-    <meta name="viewport" content="width=device-width, height=divice-height, initial-scale=1.0, user-scalable=no,
-    maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
-    <!--모바일페이지크기조절메타태그-->
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
-    rel="stylesheet">
-    <style>
-      html {
-        -webkit-text-size-adjust: none;
-        font-family: 'Nanum Gothic', sans-serif;
-        background-color : white;
+    <title>Hoegi</title> <!--웹 페이지 타이틀 달기(2장)-->
+    <meta charset="utf-8"> <!--메타 데이터 삽입, UTF-8이라는 방식으로 저장됨(2징)-->
+  <meta name="viewport" content="width=device-width, height=divice-height, initial-scale=1.0, user-scalable=no,
+  maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
+   <!--메타데이터 삽입, 모바일 반응형 웹(2장)-->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
+  rel="stylesheet">
+  <!--메타 데이터 삽입, 구글 제공 폰트 사용(2장)-->
+  <style> /* style태그로 스타일시트 작성 (4장)*/
+    header { /*태그이름 셀렉터(4장)*/
+      background-color : #eeeeee; /*배경색지정(4장)*/
+      width : 100%; /*크기지정(4장)*/
+      height : 35px;
+      border : none; /*테두리없음(4장)*/
+    }
+    header button { /*자손 셀렉터(4장)*/
+      font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+      padding : 0 5px; /*상하/좌우패딩(4장)*/
+      border : none;  /*테두리없음(4장)*/
+      outline : none;  /*클릭시테두리없음(4장)*/
+      text-align: center; /*텍스트정렬(4장)*/
+      line-height: 35px; /*줄높이지정*/
+      font-size : 14px; /*폰트크기(4장)*/
+      color : #828282; /*텍스트색(4장)*/
+      text-shadow : 0.5px 0.5px 0.5px #dcdcdc; /*텍스트그림자(4장)*/
+    }
+    .info { /*class 셀렉터(4장)*/
+      text-align : center; /*텍스트정렬(4장)*/
+      padding-top : 10px; /*윗패딩(4장)*/
+      font-size : 10px; /*폰트크기(4장)*/
+      color : #AAAAAA; /*텍스트색(4장)*/
+      padding-bottom : 3px; /*밑패딩(4장)*/
+    }
+    .map { /*class 셀렉터(4장)*/
+      display: block; /*블록박스(5장)*/
+      text-align : center; /*텍스트정렬(4장)*/
+      margin-left: auto; /*여백자동으로지정(4장)*/
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    p { /*태그이름 셀렉터(4장)*/
+      text-align : center; /*텍스트정렬(4장)*/
+    }
+    details { /*태그이름 셀렉터(4장)*/
+      margin-left: auto; /*여백자동으로지정(4장)*/
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      text-align : center;
+      color : #AAAAAA; /*텍스트색(4장)*/
+      font-size : 14px; /*폰트크기(4장)*/
+      width : 160px; /*크기지정(4장)*/
+      padding-bottom : 6px; /*밑패딩(4장)*/
+    }
+    details summary { /*자손 셀렉터(4장)*/
+      text-align : center; /*텍스트정렬(4장)*/
+      border : none; /*테두리없음(4장)*/
+      list-style : none; /*리스트 스타일없음(5장)*/
+      outline : none; /*클릭시테두리없음(4장)*/
+    }
+    details summary::-webkit-details-marker {
+      display: none; /*마크없애기*/
       }
-      nav {
-        background-color : #eeeeee;
-        width : 100%;
-        height : 35px;
-        border : none;
-      }
-      nav button {
-        font-family: 'Nanum Gothic', sans-serif;
-        padding : 0 5px;
-        border : none;
-        outline : none;
-        text-align: center;
-        line-height: 35px;
-        font-size : 14px;
-        color : #828282;
-        text-shadow : 0.5px 0.5px 0.5px #dcdcdc;
-      }
-      .info {
-        text-align : center;
-        padding-top : 10px;
-        font-size : 10px;
-        color : #AAAAAA;
-        padding-bottom : 3px;
-      }
-      .map {
-        display: block;
-        text-align : center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-      }
-      p {
-        text-align : center;
-      }
-      details {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        text-align : center;
-        color : #AAAAAA;
-        font-size : 14px;
-        width : 160px;
-        padding-bottom : 6px;
-      }
-      details summary {
-        text-align : center;
-        border : none;
-        list-style : none;
-        outline : none;
-      }
-      details summary::-webkit-details-marker {
-        display: none;
-        text-align : center;
-        } /*마크없애기*/
       </style>
       </head>
       <body>
-        <nav>
+        <header> <!--상단바(3장)-->
           <button onclick="history.back(-1)">뒤로가기</button>
-        </nav>
-        <div class="info">
+          <!--뒤로가기버튼(3장),
+          이벤트리스너 속성에 자바스크립트 코드 작성(6장), onclick 리스너(9장)-->
+        </header>
+        <div class="info"> <!--박스모델(4장), class 속성-->
         <p><image src="Hoegi.png" width=70% height=70%></p>
           소요시간은 최소시간이므로 교통상황에 따라 더 걸릴 수 있습니다.
+          <!--단락나누기, 이미지삽입(2장)-->
         </div>
-        <details>
+        <section> <!--문서의 장 or 절을 구성(3장)-->
+        <details> <!--목록 보거나 숨기기(3장)-->
           <summary>17개 정류장 이동∇</summary>
           <p style="font-size : 10px">광운전자공업고등학교<br>벼루말교<br>
           장위래미안아파트<br>꿈의숲아이파크아파트<br>장곡초교사거리<br>하나은행장위동지점<br>
           장위동원천주유소<br>장위2동주민센터<br>돌곶이역<br>석관시장<br>석관동새마을금고<br>
           한국예술종합학교<br>의릉입구<br>이문동우체국<br>외대앞<br>경희중고<br>회기시장</p>
+          <!--줄바꾸기(2장), p 스타일속성태그, 폰트크기조정(4장)-->
         </details>
-        <div class="map">
-        <div align = center>
+        <div class="map"> <!--박스모델(4장), class 속성-->
+        <div align = center> <!--div 가운데정렬-->
           <div id="daumRoughmapContainer1592191023473"
           class="root_daum_roughmap root_daum_roughmap_landing"></div>
+          <!--지도노드-->
           <script charset="UTF-8" class="daum_roughmap_loader_script"
           src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-          <script charset="UTF-8">
+          <!--설치스크립트-->
+          <script charset="UTF-8"> //실행스크립트
   	       new daum.roughmap.Lander({
   		         "timestamp" : "1592191023473",
   		         "key" : "ys9r",
-  		         "mapWidth" : "300",
+  		         "mapWidth" : "300", //지도크기조정
   		         "mapHeight" : "300"
   	          }).render();
           </script>
         </div>
         </div>
+      </section>
   </body>
 </html>
