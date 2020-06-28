@@ -1,0 +1,226 @@
+<!DOCTYPE html> <!--HTML5 문서(2장)-->
+<html>
+  <head>
+    <title>내용목차</title> <!--웹 페이지 타이틀 달기(2장)-->
+    <meta charset="utf-8"> <!--메타 데이터 삽입, UTF-8이라는 방식으로 저장됨(2징)-->
+    <meta name="viewport" content="width=device-width, height=divice-height,
+    initial-scale=1.0, user-scalable=no,
+    maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
+    <!--메타데이터 삽입, 모바일 반응형 웹(2장)-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
+    rel="stylesheet">
+    <!--메타 데이터 삽입, 구글 제공 폰트 사용(2장)-->
+    <style>
+      header { /*태그 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        text-align: center; /*텍스트정렬(4장)*/
+      }
+      header p { /*자손 셀렉터(4장)*/
+        font-size : 13px; /*폰트크기(4장)*/
+        padding-left : 20px; /*왼쪽패딩(4장)*/
+      }
+      header button { /*자손 셀렉터(4장)*/
+        background-color : #eeeeee;
+        width : 100%; /*크기지정(4장)*/
+        height : 35px;
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        padding : 0 5px; /*상하/좌우패딩(4장)*/
+        border : none;  /*테두리없음(4장)*/
+        outline : none;  /*클릭시테두리없음(4장)*/
+        text-align: left; /*텍스트정렬(4장)*/
+        line-height: 35px; /*줄높이지정*/
+        font-size : 14px; /*폰트크기(4장)*/
+        color : #828282; /*텍스트색(4장)*/
+        text-shadow : 0.5px 0.5px 0.5px #dcdcdc; /*텍스트그림자(4장)*/
+      }
+      #main { /*class 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size : 15px; /*폰트크기(4장)*/
+        padding-top : 10px;
+        padding-left : 30px;
+      }
+      #sub { /*class 셀렉터(4장)*/
+        font-family: 'Nanum Gothic', sans-serif; /*나눔고딕체적용(4장)*/
+        font-size : 14px; /*폰트크기(4장)*/
+        padding : 20px;
+      }
+      #sub li a { /*자손 셀렉터(4장)*/
+        padding : 15px; /*패딩(4장)*/
+      }
+      </style>
+      </head>
+      <body>
+        <header> <!--상단바(3장)-->
+          <button onclick="history.back(-1)">뒤로가기</button>
+          <!--뒤로가기버튼(3장),
+          이벤트리스너 속성에 자바스크립트 코드 작성(6장), onclick 리스너(9장)-->
+          <h1><span style="color:#32BEBE">기술목차</span></h1>
+          <!--제목 작성(2장), span 스타일태그(4장)-->
+          <div align="left"> <!--왼쪽정렬-->
+          <p>사용한 기술들을 나타내었고, 각 <strong>그림들을 누르면</strong> 기술이 사용된 페이지로 이동합니다.<br>
+            <br>그리고 검색어를 입력한 후 나오는 페이지들은 구조가 같기에 광운대역 페이지를 대표로 하여
+            설명하였습니다.
+          </p></div>
+        </header>
+        <section> <!--문서의 장 or 절을 구성(3장)-->
+        <ul id ="main">  <!--순서 없는 리스트(2장)-->
+        <li>2장</li>
+        <ul id ="sub">
+          <li>&lt;p&gt;,&lt;br&gt; : 단락바꾸기, 줄바꾸기<br>
+            <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="2_p,br.png"
+              width="30%" height="30%"></a></li>
+          <li>&lt;strong&gt; : 텍스트 강조<br>
+            <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_s.png"
+              width="25%" height="25%"></a></li>
+          <li>&lt;link&gt; : 여러 페이지에 나눔고딕체 적용<br>
+            <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_l.png"
+              width="15%" height="15%"></a>
+              <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="2_l2.png"
+                width="20%" height="20%"></a>
+                <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="2_l3.png"
+                  width="17%" height="17%"></a></li>
+          <li>&lt;img&gt; : 이미지 삽입하기<br>
+            <a href="https://chaerim26.github.io/KWTP/KwangwoonUniv.html"><img src="2_i.png"
+              width="20%" height="20%"></a>
+              <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_i2.jpg"
+                width="20%" height="20%"></a></li>
+          <li>&lt;ul&gt;, &lt;li&gt; : 리스트 나타내기<br>
+            <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="2_u.png"
+              width="20%" height="20%"></a>
+              <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_u2.png"
+                width="15%" height="15%"></a>
+          </li>
+          <li>&lt;a&gt; : 하이퍼링크 삽입<br>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_a.png"
+            width="20%" height="20%"></a>
+            <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="2_a2.png"
+              width="20%" height="20%"></a><br>
+              <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_a3.png"
+                width="20%" height="20%"></a>
+                <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_a4.png"
+                  width="25%" height="25%"></a></li>
+          <li>&lt;h1&gt;, &lt;h2&gt; : 제목작성 <br>
+            <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="2_h1.png"
+              width="10%" height="10%"></a>
+              <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="2_h2.png"
+                width="15%" height="15%"></a></li>
+           </li>
+        </ul>
+        <li>3장</li>
+        <ul id="sub">
+         <li>&lt;header&gt; : 상단바작성<br>
+           <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_h.png"
+             width="30%" height="30%"></a><br>
+             <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="3_h2.png"
+               width="30%" height="30%"></a><br>
+               <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="3_h3.png"
+                 width="30%" height="30%"></a>
+         </li>
+         <li>&lt;nav&gt; : 목차작성<br>
+           <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_n.png"
+             width="20%" height="20%"></a>
+         </li>
+         <li>&lt;section&gt; : 각 장 작성<br>
+           <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_se.png"
+             width="20%" height="20%"></a>
+             <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="3_se2.png"
+               width="20%" height="20%"></a>
+               <a href="https://chaerim26.github.io/KWTP/KwangwoonUniv.html"><img src="3_se3.png"
+                 width="15%" height="15%"></a>
+         </li>
+         <li>&lt;footer&gt; : 하단부분작성<br>
+           <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_f.png"
+             width="30%" height="30%"></a>
+         </li>
+         <li>&lt;details&gt;, &lt;summary&gt; : 목록 펼치고접기<br>
+           옆의 화살표 아이콘을 클릭하면 목록을 펼치고 접을 수 있습니다.<br>
+           <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_u2.png"
+             width="15%" height="15%"></a>
+             <a href="https://chaerim26.github.io/KWTP/KwangwoonUniv.html"><img src="3_ds2.png"
+               width="20%" height="20%"></a>
+         </li>
+         <li>&lt;form&gt;,&lt;input&gt;,&lt;button&gt; : 입력폼,검색버튼,placeholder<br>
+           <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_fib.png"
+             width="30%" height="30%"></a>
+         </li>
+         <li>&lt;button&gt; : 검색,홈으로가기,뒤로가기<br>
+           <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_fib.png"
+             width="30%" height="30%"></a><br>
+             <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="3_h2.png"
+               width="30%" height="30%"></a>
+               <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="3_h3.png"
+                 width="30%" height="30%"></a>
+         </li>
+       </ul>
+        <li>4장</li>
+        <ul id ="sub">
+        </li>
+        <li>색표현 : color,background-color<br>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="4_c.png"
+            width="30%" height="30%"></a>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="4_bc.png"
+            width="30%" height="30%"></a>
+        </li>
+        <li>텍스트 꾸미기 속성 : text-align,text-shadow<br>
+          <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="2_h2.png"
+            width="20%" height="20%"></a></li>
+        <li>폰트 제어 속성 : font-size,font-family,
+          박스모델 속성 : width,height,padding,margin,border<br>
+          전체적인 페이지에 모두 적용<br>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_l.png"
+            width="15%" height="15%"></a></li>
+            <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="2_l2.png"
+              width="15%" height="15%"></a></li>
+              <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="2_l3.png"
+                width="15%" height="15%"></a></li>
+        </li>
+      </ul>
+        <li>5장</li>
+        <ul id="sub">
+        <li>유동 배치 : float<br>
+          목록들을 왼쪽에 배치<br>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_u2.png"
+            width="15%" height="15%"></a><br>
+            입력창은 왼쪽에, 검색창은 오른쪽에 배치<br>
+            <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_fib.png"
+              width="30%" height="30%"></a>
+        </li>
+        <li>리스트 마크 없애기 : list-style<br>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="2_u2.png"
+            width="15%" height="15%"></a>
+          </li>
+      </ul>
+        <li>6장</li>
+        <ul id="sub">
+        <li>&lt;script&gt; 태그로 자바스크립트 코드 작성,
+        변수, switch문, break문, 함수<br>
+        검색창에 검색어를 입력하고 검색하면 검색어에 따라서 페이지 이동!<br>
+        <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_fib.png"
+          width="30%" height="30%"></a>
+      </li>
+        <li>HTML 태그의 이벤트 리스너 속성에 자바스크립트 코드 작성<br>
+          해당 버튼을 누르면 동적 동작이 가능<br>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_fib.png"
+            width="30%" height="30%"></a><br>
+            <a href="https://chaerim26.github.io/KWTP/guide.html"><img src="3_h2.png"
+              width="30%" height="30%"></a>
+              <a href="https://chaerim26.github.io/KWTP/contents.html"><img src="3_h3.png"
+                width="30%" height="30%"></a>
+        </li>
+        <li>확인 다이얼로그 : alert<br>
+          검색을 진행하면 검색어에 따라 뜨는 창<br>
+          <a href="https://chaerim26.github.io/KWTP/index.html"><img src="6_d.jpg"
+            width="20%" height="20%"></a>
+        </li>
+      </ul>
+        <li>8장</li>
+        <ul id="sub">
+          <li>DOM객체 : document.getElementById 사용<br>
+            검색어에 따라 페이지 이동!<br>
+            <a href="https://chaerim26.github.io/KWTP/index.html"><img src="3_fib.png"
+              width="30%" height="30%"></a></li>
+        </ul>
+        <!--이미지삽입, 리스트아이템 나타내기, 하이퍼링크 작성, 문자입력(2장)-->
+      </section>
+  </body>
+</html>
